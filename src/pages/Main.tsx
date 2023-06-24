@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Text } from '../components/Text';
+
 const Main = () => (
   <div className="flex flex-col gap-1">
     <div className="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
@@ -14,12 +16,12 @@ const Main = () => (
       <div className="p-6 bg-gray-700 border border-black" />
     </div>
     <div className="p-6 mx-auto bg-white rounded-xl shadow-lg text-left">
-      <div className="text-2xl font-semibold">Channel manager</div>
-      <div className="text-sm font-semibold text-black-subtle">Hotel</div>
-      <div className="text-base font-normal text-black-subtle">Hotel A</div>
-      <div className="text-sm font-semibold text-black-subtle">Channel</div>
-      <div className="text-sm font-semibold text-black-subtle">Visibility</div>
-      <div className="text-sm font-normal text-gray-700">Channel 1</div>
+      <Text size='2xl' weight='semibold'>Channel manager</Text>
+      <Text size='sm' weight='semibold' className='text-black-subtle'>Hotel</Text>
+      <Text className='text-black-subtle'>Hotel A</Text>
+      <Text size='sm' weight='semibold' className='text-black-subtle'>Channel</Text>
+      <Text size='sm' weight='semibold' className='text-black-subtle'>Visibility</Text>
+      <Text size='sm' className='text-gray-700'>Channel 1</Text>
     </div>
   </div>
 );
