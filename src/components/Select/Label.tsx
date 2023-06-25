@@ -6,7 +6,10 @@ type Props = {
 } & DOMAttributes<FocusableElement>;
 
 const Label = ({ children, ...restProps }: Props) => (
-  <div {...restProps} className="text-sm font-semibold text-black-subtle cursor-default">
+  <div
+    {...restProps}
+    className="text-sm font-semibold text-black-subtle dark:text-darkgray-500 cursor-default"
+  >
     {children}
   </div>
 );

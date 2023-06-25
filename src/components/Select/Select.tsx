@@ -36,7 +36,7 @@ const Select = (props: SelectProps) => {
         name={props.name}
       />
       <Button isOpen={state.isOpen} {...triggerProps} buttonRef={ref}>
-        <span {...valueProps} className="text-black-subtle">
+        <span {...valueProps} className="text-black-subtle dark:text-darkgray-400">
           {state.selectedItem ? state.selectedItem.rendered : 'Select an option'}
         </span>
       </Button>

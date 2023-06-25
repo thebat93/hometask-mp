@@ -13,7 +13,7 @@ interface Channel {
 }
 
 const Title = ({ children }: { children: ReactNode }) => (
-  <div className="text-sm text-gray-700">{children}</div>
+  <div className="text-sm text-gray-700 dark:text-darkgray-400">{children}</div>
 );
 
 const ChannelsList = ({
@@ -26,7 +26,7 @@ const ChannelsList = ({
   <ChannelsListWrapper>
     <List aria-label="List of channels">
       {channels.map(channel => (
-        <ListItem key={channel.id}>
+        <ListItem key={channel.id} textValue={channel.title}>
           <ChannelsListRow key={channel.id} title={<Title>{channel.title}</Title>}>
             <Switch
               aria-label={`Is channel ${channel.title} visible?`}

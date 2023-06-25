@@ -13,8 +13,8 @@ const ListItem = ({ item, state }: { item: Node<unknown>; state: ListState<unkno
     <li
       {...mergeProps(rowProps, focusProps)}
       ref={ref}
-      className={cx('border-b border-gray-200 last:border-0', {
-        ['outline-1 outline-black-subtle']: isFocusVisible,
+      className={cx('border-b border-gray-200 dark:border-darkblue-450 last:border-0', {
+        ['outline-1 outline-black-subtle -outline-offset-1']: isFocusVisible,
       })}
     >
       <div {...gridCellProps}>{item.rendered}</div>
