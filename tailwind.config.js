@@ -25,6 +25,9 @@ export default {
       fontFamily: {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        sm: '0px 1px 2px 0px rgba(15, 23, 42, 0.05)'
+      }
     },
   },
   plugins: [],

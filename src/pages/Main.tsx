@@ -1,29 +1,17 @@
 import React from 'react';
 
-import { Text } from '../components/Text';
+import { H1 } from '../components/Typography';
+import { Select, Item } from '../components/Select';
 
 const Main = () => (
-  <div className="flex flex-col gap-1">
-    <div className="p-6 mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-      <div className="p-6 bg-black border border-black" />
-      <div className="p-6 bg-black-subtle border border-black" />
-      <div className="p-6 bg-white border border-black" />
-      <div className="p-6 bg-blue-500 border border-black" />
-      <div className="p-6 bg-gray-50 border border-black" />
-      <div className="p-6 bg-gray-200 border border-black" />
-      <div className="p-6 bg-gray-300 border border-black" />
-      <div className="p-6 bg-gray-500 border border-black" />
-      <div className="p-6 bg-gray-700 border border-black" />
-    </div>
-    <div className="p-6 mx-auto bg-white rounded-xl shadow-lg text-left">
-      <Text size='2xl' weight='semibold'>Channel manager</Text>
-      <Text size='sm' weight='semibold' className='text-black-subtle'>Hotel</Text>
-      <Text className='text-black-subtle'>Hotel A</Text>
-      <Text size='sm' weight='semibold' className='text-black-subtle'>Channel</Text>
-      <Text size='sm' weight='semibold' className='text-black-subtle'>Visibility</Text>
-      <Text size='sm' className='text-gray-700'>Channel 1</Text>
-    </div>
-  </div>
+  <main className="p-6 flex flex-col gap-5">
+    <H1>Channel manager</H1>
+    <Select label="Hotel" className="max-w-[17rem]" selectedKey={'hotel_a'} onSelectionChange={(key) => console.log(key)}>
+      <Item key={'hotel_a'}>Hotel A</Item>
+      <Item key={'hotel_b'}>Hotel B</Item>
+      <Item key={'hotel_c'}>Hotel C</Item>
+    </Select>
+  </main>
 );
 
 export { Main };
