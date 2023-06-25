@@ -40,4 +40,5 @@ const ChannelsList = ({
   </ChannelsListWrapper>
 );
 
+export type { Channel };
 export { ChannelsList };
