@@ -1,0 +1,4 @@
+[
+  { "id": "hotel_a", "title": "Hotel A", "channels": ["channel_1", "channel_2"] },
+  { "id": "hotel_b", "title": "Hotel B", "channels": ["channel_1"] }
+]

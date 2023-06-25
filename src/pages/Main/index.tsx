@@ -1,38 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
 import { MainView } from './view';
-
-const hotelsData = [
-  { id: 'hotel_a', title: 'Hotel A', channels: ['channel_1', 'channel_2'] },
-  { id: 'hotel_b', title: 'Hotel B', channels: ['channel_1'] },
-];
-
-const channelsData = [
-  { id: 'channel_1', title: 'Channel 1' },
-  { id: 'channel_2', title: 'Channel 2' },
-];
-
-const LOCALSTORAGE_KEY = 'meeting-package-hotels-data';
+import { useHotels } from './hooks/useHotels';
+import { useChannels } from './hooks/useChannels';
+import { storage } from './services/storage';
 
 const Main = () => {
-  const [hotels, setHotels] = useState(() => {
-    const persistedRawData = window.localStorage.getItem(LOCALSTORAGE_KEY);
-
-    if (persistedRawData === null) {
-      return hotelsData;
-    }
-
-    try {
-      const persistedData = JSON.parse(persistedRawData);
-
-      return hotelsData.map(hotelData => ({ ...hotelData, channels: persistedData[hotelData.id] }));
-    } catch (error) {
-      console.error(error);
-      return hotelsData;
-    }
-  });
-
-  const [channels, setChannels] = useState(channelsData);
+  const { isLoading: isLoadingHotels, hotels, setHotels } = useHotels();
+  const { isLoading: isLoadingChannels, channels } = useChannels();
 
   const [selectedHotelId, setSelectedHotelId] = useState<string | number | null>(null);
 
@@ -67,14 +42,17 @@ const Main = () => {
   );
 
   useEffect(() => {
+    if (hotels.length === 0) {
+      return;
+    }
+
     const hotelsData = hotels.reduce((hotelsObject, hotel) => {
       hotelsObject[hotel.id] = hotel.channels;
 
       return hotelsObject;
     }, {});
-    const hotelsJson = JSON.stringify(hotelsData);
 
-    window.localStorage.setItem(LOCALSTORAGE_KEY, hotelsJson);
+    storage.setData(hotelsData);
   }, [hotels]);
 
   return (
@@ -83,6 +61,7 @@ const Main = () => {
       onHotelIdChange={setSelectedHotelId}
       hotels={hotels}
       channels={channels}
+      isLoading={isLoadingHotels || isLoadingChannels}
       onChannelVisibilityChange={changeChannelVisibility}
     />
   );
