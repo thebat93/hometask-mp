@@ -10,12 +10,7 @@ const ChannelsListRow = ({
   children: ReactNode;
   className?: string;
 }) => (
-  <div
-    className={cx(
-      'px-4 py-3 flex gap-4 justify-between',
-      className,
-    )}
-  >
+  <div className={cx('px-4 py-3 flex gap-4 justify-between', className)}>
     <span>{title}</span>
     <div>{children}</div>
   </div>

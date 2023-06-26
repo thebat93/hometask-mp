@@ -6,7 +6,6 @@ const storage = {
     if (persistedRawData !== null) {
       try {
         return JSON.parse(persistedRawData);
-
       } catch (error) {
         console.error(error);
 
@@ -21,7 +20,7 @@ const storage = {
     const hotelsJson = JSON.stringify(data);
 
     window.localStorage.setItem(LOCALSTORAGE_KEY, hotelsJson);
-  }
+  },
 };
 
 export { storage };
