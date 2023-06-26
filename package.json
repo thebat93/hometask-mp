@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "pretty": "eslint 'src/**/*.{tsx,ts,js,jsx}' --fix && prettier --write 'src/**/*.{tsx,ts,js,jsx}'"
+    "pretty": "eslint 'src/**/*.{tsx,ts,js,jsx}' --fix && prettier --write 'src/**/*.{tsx,ts,js,jsx}'",
+    "typecheck": "tsc -p ./tsconfig.json --noEmit"
   },
   "dependencies": {
     "clsx": "^1.2.1",
