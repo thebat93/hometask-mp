@@ -1,4 +1,4 @@
-import React, { useRef, RefObject, ReactNode } from 'react';
+import { useRef, RefObject, ReactNode } from 'react';
 import type { OverlayTriggerState } from 'react-stately';
 import type { AriaPopoverProps } from '@react-aria/overlays';
 import { usePopover, DismissButton, Overlay } from '@react-aria/overlays';

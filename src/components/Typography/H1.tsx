@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import cx from 'clsx';
 
 const H1 = ({
@@ -11,4 +11,5 @@ const H1 = ({
   <h1 className={cx(`text-2xl`, `font-semibold`, className)}>{children}</h1>
 );
 
+// eslint-disable-next-line  react-refresh/only-export-components
 export { H1 };

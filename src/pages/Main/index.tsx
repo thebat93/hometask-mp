@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { MainView } from './view';
 import { useHotels } from './hooks/useHotels';
@@ -38,7 +38,7 @@ const Main = () => {
         });
       }
     },
-    [selectedHotelId],
+    [selectedHotelId, setHotels],
   );
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Main = () => {
       hotelsObject[hotel.id] = hotel.channels;
 
       return hotelsObject;
-    }, {});
+    }, {} as Record<string, string[]>);
 
     storage.setData(hotelsData);
   }, [hotels]);

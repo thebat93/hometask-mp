@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useToggleState } from 'react-stately';
 import { useFocusRing, useSwitch, VisuallyHidden } from 'react-aria';
 import type { AriaSwitchProps } from 'react-aria';

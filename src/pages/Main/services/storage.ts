@@ -16,7 +16,8 @@ const storage = {
 
     return null;
   },
-  setData: (data: any) => {
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+  setData: (data: Record<string, any> | any[]) => {
     const hotelsJson = JSON.stringify(data);
 
     window.localStorage.setItem(LOCALSTORAGE_KEY, hotelsJson);

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useGridList } from 'react-aria';
 import { useListState } from 'react-stately';
 import type { AriaGridListProps } from 'react-aria';

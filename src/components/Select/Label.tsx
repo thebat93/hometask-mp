@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { DOMAttributes, FocusableElement } from '@react-types/shared';
 
 type Props = {

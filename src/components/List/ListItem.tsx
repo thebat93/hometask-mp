@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { mergeProps, useFocusRing, useGridListItem } from 'react-aria';
 import cx from 'clsx';
 import type { Node } from '@react-types/shared';

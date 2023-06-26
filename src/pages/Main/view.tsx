@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { H1 } from '../../components/Typography';
 import { Select, Item } from '../../components/Select';

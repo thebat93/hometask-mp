@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import { RefObject } from 'react';
 import { useButton, useFocusRing, mergeProps, AriaButtonProps } from 'react-aria';
 import cx from 'clsx';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import cx from 'clsx';
 
 const Toggle = ({ isToggled, isFocusVisible }: { isToggled: boolean; isFocusVisible: boolean }) => (

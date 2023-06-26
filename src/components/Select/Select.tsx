@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import type { AriaSelectProps } from '@react-types/select';
 import { HiddenSelect, useSelect } from 'react-aria';
 import { useSelectState } from 'react-stately';
